@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>💖 For You</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff0f5;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  img {
+    width: 220px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin: 20px 0;
+  }
+
+  .buttons {
+    position: relative;
+    height: 80px;
+  }
+
+  button {
+    padding: 12px 26px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #yes {
+    background: #ff6f91;
+    color: white;
+  }
+
+  #no {
+    background: #ccc;
+    position: absolute;
+    left: 120px;
+  }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <img src="https://i.imgur.com/3XjQZ6n.png" alt="cute bear">
+    <h1>Do you love me? 💕</h1>
+
+    <div class="buttons">
+      <button id="yes" onclick="yesClick()">Yes</button>
+      <button id="no" onmouseover="moveNo()">No</button>
+    </div>
+  </div>
+
+<script>
+  function moveNo() {
+    const noBtn = document.getElementById("no");
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 60 - 30;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  }
+
+  function yesClick() {
+    document.body.innerHTML = "<h1 style='color:#ff6f91;'>I knew it 😘💖</h1>";
+  }
+</script>
+</body>
+</html>
